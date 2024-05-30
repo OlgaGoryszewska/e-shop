@@ -1,10 +1,14 @@
-import React from "react"
+import react from 'react'
 
+const Layout = () => {
+  return(
+    <div className='bg-'><h1>hello</h1>
+      
+    </div>
 
-const Nav = () => {
-    return (
-        <div><h1> Hello </h1></div>
-    )
+  )
 }
 
-export default Nav
+export default Layout
+
+
