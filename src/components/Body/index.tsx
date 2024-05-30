@@ -1,6 +1,6 @@
 import react from 'react'
 
-const Nav = () => {
+const Body = () => {
   return(
     <div><h1>hello</h1>
       
@@ -9,6 +9,6 @@ const Nav = () => {
   )
 }
 
-export default Nav
+export default Body
 
 

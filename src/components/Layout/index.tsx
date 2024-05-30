@@ -1,10 +1,19 @@
 import react from 'react'
+import Nav from '../Nav'
+import Body from '../Body'
+import Footer from "../Footer"
+
 
 const Layout = () => {
   return(
-    <div className='bg-'><h1>hello</h1>
-      
+    <div>
+        
+    <Nav/>
+    <Body/>
+    <Footer/>
+
     </div>
+
 
   )
 }
