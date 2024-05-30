@@ -1,9 +1,11 @@
 import react from 'react'
+import Nav from '../Nav'
 
 function App() {
 
   return (
-    <div><h1> hello</h1>
+    <div>
+      <Nav/>
       
     </div> 
       
