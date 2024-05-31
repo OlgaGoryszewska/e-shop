@@ -6,7 +6,7 @@ import Footer from "../Footer"
 
 const Layout = () => {
   return(
-    <div>
+    <div className=" grid grid-cols-3 md:grid-cols-5 min-h-screen">
         
     <Nav/>
     <Body/>
