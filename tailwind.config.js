@@ -10,8 +10,13 @@ module.exports = {
     extend: {
       colors: {
         'primary': '#D8D7D7'
+      
 
-      }
+      },
+      fontFamily: {
+        'sans': ['Poppins', 'sans-serif']
+      },
+
     },
   },
   plugins: [],
