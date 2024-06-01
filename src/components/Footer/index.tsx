@@ -1,9 +1,10 @@
 import react from 'react'
+import logo_znak_wodny from '../../assets/logo_znak_wodny.png'
 
 const Footer = () => {
   return(
-    <div className="lg:col-span-3 col-span-5 lg:col-start-2 bg-amber-700">
-      <h1>Footer</h1>
+    <div className="flex justify-center">
+       <img className="h-12" src={logo_znak_wodny} alt="logo"/>
       
     </div>
 
