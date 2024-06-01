@@ -1,9 +1,12 @@
 import react from 'react'
+import Nav from '../Nav'
+import Layout from '../Layout'
 
 function App() {
 
   return (
-    <div><h1> hello</h1>
+    <div>
+      <Layout/>
       
     </div> 
       
