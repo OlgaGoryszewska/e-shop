@@ -9,9 +9,14 @@ module.exports = {
   
     extend: {
       colors: {
-        'primary': '#D8D7D7'
+        'primary': '#D8D7D7',
+        'black': '#252323',
+      },
+      fontFamily: {
+        'sans': ['Poppins', 'sans-serif']
+      },
 
-      }
+
     },
   },
   plugins: [],
