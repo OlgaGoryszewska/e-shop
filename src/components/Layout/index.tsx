@@ -1,23 +1,16 @@
-import react from 'react'
-import Nav from '../Nav'
-import Body from '../Body'
-import Footer from "../Footer"
-
+import react from "react";
+import Nav from "../Nav";
+import Body from "../Body";
+import Footer from "../Footer";
 
 const Layout = () => {
-  return(
+  return (
     <div className=" flex flex-col min-h-screen">
-        
-    <Nav/>
-    <Body/>
-    <Footer/>
-
+      <Nav />
+      <Body />
+      <Footer />
     </div>
+  );
+};
 
-
-  )
-}
-
-export default Layout
-
-
+export default Layout;

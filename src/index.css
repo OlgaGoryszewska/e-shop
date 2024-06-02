@@ -2,13 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    @apply bg-primary;
-    @apply mr-8;
-    @apply ml-8;
-    @apply text-sm;
-    @apply text-black;
-
-    
-
+body {
+  @apply bg-primary;
+  @apply mr-8;
+  @apply ml-8;
+  @apply text-sm;
+  @apply text-black;
 }
