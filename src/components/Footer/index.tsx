@@ -18,7 +18,7 @@ const Footer = () => {
         <img className='h-6 m-2' src={facebook} alt='fecebook icon'></img>
         <img className='h-6 m-2' src={instagram} alt='instagram icon'></img>
        </div>
-       <p>devgoddess.no</p>
+       <p className='flex flex-row justify-center'>devgoddess.no</p>
     </div>
  
 
