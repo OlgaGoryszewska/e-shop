@@ -1,16 +1,13 @@
-import react from 'react'
-import Nav from '../Nav'
-import Layout from '../Layout'
+import react from "react";
+import Nav from "../Nav";
+import Layout from "../Layout";
 
 function App() {
-
   return (
     <div>
-      <Layout/>
-      
-    </div> 
-      
-  )
+      <Layout />
+    </div>
+  );
 }
 
-export default App
+export default App;
