@@ -10,8 +10,8 @@ import Header from "../Header";
 const App = () => {
   return (
     <Router>
-      <div>
-        <DropDownMenu/>
+      <div className=" flex flex-col min-h-screen">
+        <Header/>
         <Routes>
           <Route path="/HomePage" element={<HomePage />} />
           <Route path="/CardPage" element={<CardPage />} />
