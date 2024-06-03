@@ -1,12 +1,12 @@
 import react from "react";
-import Nav from "../Nav";
+import Header from "../Header";
 import Body from "../Body";
 import Footer from "../Footer";
 
 const Layout = () => {
   return (
     <div className=" flex flex-col min-h-screen">
-      <Nav />
+      <Header />
       <Body />
       <Footer />
     </div>
