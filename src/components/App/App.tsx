@@ -10,14 +10,14 @@ import Header from "../Header";
 const App = () => {
   return (
     <Router>
-      <div className=" flex flex-col min-h-screen">
-        <Header/>
+      <>
+        <DropDownMenu/>
         <Routes>
           <Route path="/HomePage" element={<HomePage />} />
           <Route path="/CardPage" element={<CardPage />} />
         </Routes>
         <Footer/>
-      </div>
+      </>
     </Router>
   );
 };
