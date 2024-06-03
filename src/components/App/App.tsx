@@ -1,13 +1,25 @@
 import react from "react";
-import Nav from "../Header";
 import Layout from "../Layout";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import HomePage from "../../Pages/HomePage";
+import CardPage from "../../Pages/CardPage";
+import DropDownMenu from "../DropDownMenu";
+import Footer from "../Footer";
+import Header from "../Header";
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <Layout />
-    </div>
+    <Router>
+      <div>
+        <DropDownMenu/>
+        <Routes>
+          <Route path="/HomePage" element={<HomePage />} />
+          <Route path="/CardPage" element={<CardPage />} />
+        </Routes>
+        <Footer/>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
