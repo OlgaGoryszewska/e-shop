@@ -1,5 +1,5 @@
 import react from "react";
-import Nav from "../Nav";
+import Nav from "../Header";
 import Layout from "../Layout";
 
 function App() {

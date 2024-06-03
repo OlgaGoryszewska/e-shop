@@ -6,7 +6,7 @@ import logo_znak_wodny from "../../assets/logo_znak_wodny.png";
 import { useState } from "react";
 import DropDownMenu from "../DropDownMenu";
 
-const Nav = () => {
+const Header = () => {
   return (
     <div className="flex flex-row justify-between max-h-12  ">
       <img className="mt-2 " src={logo_znak_wodny} alt="logo" />
@@ -20,4 +20,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default Header;
