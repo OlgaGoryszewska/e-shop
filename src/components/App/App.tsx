@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 import Layout from "../Layout";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HomePage from "../../Pages/HomePage";
@@ -11,7 +11,9 @@ const App = () => {
   return (
     <Router>
       <>
-        <DropDownMenu/>
+        <Header>
+          <DropDownMenu/>
+        </Header>
         <Routes>
           <Route path="/HomePage" element={<HomePage />} />
           <Route path="/CardPage" element={<CardPage />} />
