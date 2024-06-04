@@ -16,8 +16,10 @@ function DropDownMenu() {
       </button>
       {menu && (
         <div className="flex flex-col">
-          <Link to="/CardPage">Card</Link>
           <Link to="/HomePage">Home</Link>
+          <Link to="/CardPage">Card</Link>
+          <Link to="/ContactPage">Contact</Link>
+          <Link to="/CheckOutSuccessPage">Checkout</Link>
         </div>
       )}
     </div>
