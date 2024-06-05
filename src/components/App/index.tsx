@@ -3,7 +3,11 @@ import Header from "../Header";
 import Body from "../Body";
 import Footer from "../Footer";
 
-const Layout = () => {
+interface LayoutProps {
+  children: react.ReactNode;
+}
+
+const Layout = ({children}: LayoutProps) => {
   return (
     <div className=" flex flex-col min-h-screen">
       <Header children={undefined} />

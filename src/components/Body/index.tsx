@@ -1,9 +1,11 @@
 import React from "react";
+import sylwia from "../../assets/sylwia.jpg";
+
 
 const Body = () => {
   return (
-    <div>
-      <h1>Hi i am a body</h1>
+    <div className=" flex flex-grow">
+      <img className="p-9 justify-self-center" src={sylwia} alt="girl" /> 
     </div>
   )
 };

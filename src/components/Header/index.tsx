@@ -16,7 +16,7 @@ const Header = ({ children }: HeaderProps) => {
       <img className="mt-2 w-9 " src={logo_znak_wodny} alt="logo" />
       <div className="flex flex-row">
         <img className="mr-2" src={basket} alt="basket" />
-        <div>{children}</div>
+        <DropDownMenu />
       </div>
     </div>
   );

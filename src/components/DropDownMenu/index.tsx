@@ -15,7 +15,7 @@ function DropDownMenu() {
         <img className=" w-11 mt-2" src={hamburger} alt="menu" />
       </button>
       {menu && (
-        <div className="flex flex-col text-lg ">
+        <div className="flex flex-col text-lg relative i-50 ">
           <NavLink to="/HomePage">Home</NavLink>
           <Link to="/CardPage">Card</Link>
           <Link to="/ContactPage">Contact</Link>
