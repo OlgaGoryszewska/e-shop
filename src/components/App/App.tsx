@@ -12,18 +12,18 @@ import Header from "../Header";
 const App = () => {
   return (
     <Router>
-      <>
-        <Header>
-          <DropDownMenu/>
-        </Header>
-        <Routes>
-          <Route path="/HomePage" element={<HomePage />} />
-          <Route path="/CardPage" element={<CardPage />} />
-          <Route path="/ContactPage" element={<ContactPage />} />
-          <Route path="/CheckOutSuccessPage" element={<CheckOutSuccessPage />} />
-        </Routes>
-        <Footer/>
-      </>
+      <Header></Header>
+      <DropDownMenu />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/card-page" element={<CardPage />} />
+        <Route path="/contact-page" element={<ContactPage />} />
+        <Route
+          path="/checkout-success-page"
+          element={<CheckOutSuccessPage />}
+        />
+      </Routes>
+      <Footer />
     </Router>
   );
 };

@@ -1,4 +1,3 @@
-
 import sublogo_lotos from "../../assets/sublogo_lotos.svg";
 import hamburger from "../../assets/hamburger.svg";
 import basket from "../../assets/basket.svg";
@@ -11,15 +10,13 @@ interface HeaderProps {
   children: ReactNode;
 }
 
-const Header = ({children}:HeaderProps) => {
+const Header = ({ children }: HeaderProps) => {
   return (
     <div className="flex flex-row justify-between max-h-12  ">
       <img className="mt-2 w-9 " src={logo_znak_wodny} alt="logo" />
       <div className="flex flex-row">
         <img className="mr-2" src={basket} alt="basket" />
-        <div>
-          {children}
-        </div>
+        <div>{children}</div>
       </div>
     </div>
   );
