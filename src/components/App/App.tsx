@@ -9,19 +9,18 @@ import DropDownMenu from "../DropDownMenu";
 import Footer from "../Footer";
 import Header from "../Header";
 
+
 const App = () => {
   return (
     <Router>
-      <Header></Header>
-      <DropDownMenu />
+      <Header>
+        <DropDownMenu />
+      </Header>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/card-page" element={<CardPage />} />
         <Route path="/contact-page" element={<ContactPage />} />
-        <Route
-          path="/checkout-success-page"
-          element={<CheckOutSuccessPage />}
-        />
+        <Route path="/checkout-success-page" element={<CheckOutSuccessPage />} />
       </Routes>
       <Footer />
     </Router>
