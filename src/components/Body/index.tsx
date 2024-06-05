@@ -1,7 +1,11 @@
-import react from "react";
+import React from "react";
 
 const Body = () => {
-  return <div className="flex-grow"></div>;
+  return (
+    <div>
+      <h1>Hi i am a body</h1>
+    </div>
+  )
 };
 
 export default Body;
