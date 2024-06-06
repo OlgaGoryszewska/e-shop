@@ -1,31 +1,24 @@
-import React from "react";
-import Layout from "./Layout";
+import { createBrowserRouter,Route ,createRoutesFromElements, RouterProvider } from "react-router-dom";
 import HomePage from "../../Pages/HomePage";
-import CardPage from "../../Pages/CardPage";
 import ContactPage from "../../Pages/ContactPage";
-import CheckOutSuccessPage from "../../Pages/CheckOutSuccessPage";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from "../Header";
-import DropDownMenu from "../DropDownMenu";
-import Body from "../Body";
 
 
-const App = () => {
+const router = createBrowserRouter(
+  createRoutesFromElements(
+  <Route>
+    <Route path="/" element={<HomePage />} />,
+    <Route path="/ContactPage" element={<ContactPage />} />
+    <Route path="*" element={<div>404</div>} />
+  </Route>
+  )
+);  
+
+
+function App(){
   return (
-    <div>
-      <Router>
-        <>
-          <Layout>
-            <Routes>
-              <Route path="/HomePage" element={<HomePage />} />
-              <Route path="/CardPage" element={<CardPage />} />
-              <Route path="/ContactPage" component={ContactPage} />
-              <Route path="/CheckoutSuccessPage" element={<CheckOutSuccessPage />} />
-            </Routes>
-          </Layout>
-        </>
-      </Router>
-    </div>
+    <RouterProvider router={router}/>
+
+
   );
 };
 

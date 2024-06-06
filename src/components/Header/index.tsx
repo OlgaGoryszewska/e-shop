@@ -19,6 +19,8 @@ const Header = ({ children }: HeaderProps) => {
       <div className="flex flex-row">
         <Basket/>
         <DropDownMenu />
+
+        
       </div>
     </div>
   );
