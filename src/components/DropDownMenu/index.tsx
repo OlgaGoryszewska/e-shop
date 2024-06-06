@@ -17,9 +17,7 @@ function DropDownMenu() {
       {menu && (
         <div className="flex flex-col text-lg relative i-50 ">
           <NavLink to="/HomePage">Home</NavLink>
-          <Link to="/CardPage">Card</Link>
           <Link to="/ContactPage">Contact</Link>
-          <Link to="/CheckoutSuccessPage">Checkout</Link>
         </div>
       )}
     </div>

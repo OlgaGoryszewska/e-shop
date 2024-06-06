@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from ".";
+import Layout from "./Layout";
 import HomePage from "../../Pages/HomePage";
 import CardPage from "../../Pages/CardPage";
 import ContactPage from "../../Pages/ContactPage";
@@ -19,7 +19,7 @@ const App = () => {
             <Routes>
               <Route path="/HomePage" element={<HomePage />} />
               <Route path="/CardPage" element={<CardPage />} />
-              <Route path="/ContactPage" element={<ContactPage />} />
+              <Route path="/ContactPage" component={ContactPage} />
               <Route path="/CheckoutSuccessPage" element={<CheckOutSuccessPage />} />
             </Routes>
           </Layout>
