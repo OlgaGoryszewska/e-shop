@@ -1,10 +1,12 @@
 import sublogo_lotos from "../../assets/sublogo_lotos.svg";
 import hamburger from "../../assets/hamburger.svg";
 import basket from "../../assets/basket.svg";
+import Basket from "../Basket";
 import logo_znak_wodny from "../../assets/logo_znak_wodny.png";
 import { useState } from "react";
 import DropDownMenu from "../DropDownMenu";
 import React, { ReactNode } from "react";
+
 
 interface HeaderProps {
   children: ReactNode;
@@ -15,7 +17,7 @@ const Header = ({ children }: HeaderProps) => {
     <div className="flex flex-row justify-between max-h-12  ">
       <img className="mt-2 w-9 " src={logo_znak_wodny} alt="logo" />
       <div className="flex flex-row">
-        <img className="mr-2" src={basket} alt="basket" />
+        <Basket/>
         <DropDownMenu />
       </div>
     </div>
