@@ -1,6 +1,8 @@
 import { NavLink, Outlet} from "react-router-dom";
 import React from "react";
-
+import logo from "../../assets/logo.svg";
+import Footer from "../Footer";
+import Header from "../Header";
 
 
 
@@ -8,15 +10,12 @@ export default function Layout() {
   return (
     <div className="">
       <header>
-        <nav>
-          <h1>My Website</h1>
-          <NavLink to="/">HomePage</NavLink>
-          <NavLink to="/ContactPage">Contact</NavLink>
-        </nav>
+        <Header children={undefined}/>
       </header>
-      <main>
+      <main className="flex-grow">
         <Outlet />
       </main>
+      <Footer/>
     </div>
   );
 }
