@@ -1,7 +1,6 @@
 import { NavLink, Outlet} from "react-router-dom";
 import React from "react";
-
-
+import logo from "../../assets/logo.svg";
 
 
 export default function Layout() {
@@ -9,7 +8,7 @@ export default function Layout() {
     <div className="">
       <header>
         <nav>
-          <h1>My Website</h1>
+          <img className="mt-2 w-9 " src={logo} alt="logo" />
           <NavLink to="/">HomePage</NavLink>
           <NavLink to="/ContactPage">Contact</NavLink>
         </nav>
