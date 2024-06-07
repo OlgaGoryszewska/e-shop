@@ -12,7 +12,7 @@ export default function Layout() {
       <header>
         <Header children={undefined}/>
       </header>
-      <main>
+      <main className="flex-grow">
         <Outlet />
       </main>
       <Footer/>
