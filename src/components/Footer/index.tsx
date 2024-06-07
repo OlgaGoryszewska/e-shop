@@ -1,5 +1,5 @@
-/*import react from "react";
-import logo_znak_wodny from "../../assets/logo_znak_wodny.png";
+import react from "react";
+import logo from "../../assets/logo.png";
 import facebook from "../../assets/facebook.svg";
 import instagram from "../../assets/instagram.svg";
 
@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="flex flex-row justify-center">
         <img
           className="h-12 max-w-11 flex justify-center"
-          src={logo_znak_wodny}
+          src={logo}
           alt="logo"
         />
       </div>
@@ -27,4 +27,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;  */
+export default Footer; 

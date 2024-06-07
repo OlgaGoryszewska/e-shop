@@ -1,13 +1,23 @@
 import { createBrowserRouter, Route, createRoutesFromElements, RouterProvider } from "react-router-dom";
+
+import Layout from "../Layout";
+
+//Pages
 import HomePage from "../../Pages/HomePage";
 import ContactPage from "../../Pages/ContactPage";
-import Layout from "../Layout";
+import CardPage from "../../Pages/CardPage";
+import CheckOutPage from "../../Pages/CheckOutPage";
+import CheckOutSuccessPage from "../../Pages/CheckoutSuccessPage";
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route index element={<HomePage />} />
       <Route path="ContactPage" element={<ContactPage />} />
+      <Route path="CardPage" element={<CardPage />} />
+      <Route path="CheckOutPage" element={<CheckOutPage />} />
+      <Route path="CheckOutSuccessPage" element={<CheckOutSuccessPage />} />
       <Route path="*" element={<div>404</div>} />
     </Route>
   )
