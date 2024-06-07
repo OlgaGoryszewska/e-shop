@@ -1,5 +1,4 @@
-
-import React from 'react';
+/*import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import basket from '../../assets/basket.svg';
 
@@ -18,4 +17,4 @@ function OpenCard() {
 
 }
 
-export default OpenCard;
+export default OpenCard;    */
