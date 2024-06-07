@@ -14,7 +14,7 @@ interface HeaderProps {
 
 const Header = ({ children }: HeaderProps) => {
   return (
-    <div className="flex flex-row justify-between max-h-12  ">
+    <div className="flex flex-row justify-between max-h-12 mb-10 ">
       <img className="mt-2 h-9 " src={logo} alt="logo" />
       <div className="flex flex-row">
         <Basket/>
