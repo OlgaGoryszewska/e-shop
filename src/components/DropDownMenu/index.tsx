@@ -1,4 +1,4 @@
-import { useState } from "react";
+/*import { useState } from "react";
 import hamburger from "../../assets/hamburger.svg";
 import { Link, NavLink } from "react-router-dom";
 
@@ -24,4 +24,4 @@ function DropDownMenu() {
   );
 }
 
-export default DropDownMenu;
+export default DropDownMenu;  */

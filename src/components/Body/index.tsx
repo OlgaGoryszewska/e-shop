@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import sylwia from "../../assets/sylwia.jpg";
 
 
@@ -10,4 +10,4 @@ const Body = () => {
   )
 };
 
-export default Body;
+export default Body;*/

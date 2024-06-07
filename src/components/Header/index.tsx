@@ -1,4 +1,4 @@
-import sublogo_lotos from "../../assets/sublogo_lotos.svg";
+/*import sublogo_lotos from "../../assets/sublogo_lotos.svg";
 import hamburger from "../../assets/hamburger.svg";
 import basket from "../../assets/basket.svg";
 import Basket from "../Basket";
@@ -26,4 +26,4 @@ const Header = ({ children }: HeaderProps) => {
   );
 };
 
-export default Header;
+export default Header;  */

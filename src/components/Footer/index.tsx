@@ -1,4 +1,4 @@
-import react from "react";
+/*import react from "react";
 import logo_znak_wodny from "../../assets/logo_znak_wodny.png";
 import facebook from "../../assets/facebook.svg";
 import instagram from "../../assets/instagram.svg";
@@ -27,4 +27,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default Footer;  */
