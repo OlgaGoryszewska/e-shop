@@ -3,7 +3,10 @@ import React from "react";
 const Form = () => {
   return (
     <div className="flex justify-center pt-10">
-        <form className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+        <form onSubmit={(event) => {
+          event.preventDefault();
+          console.log("Form submitted");
+        }} className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
         <h2 className="text-2xl font-bold mb-5">Contact us</h2>
         <div className="mb-5">
           <label htmlFor="name" className="block mb-2 text-sm">Full Name</label>
