@@ -8,4 +8,10 @@ body {
   @apply ml-8;
   @apply text-sm;
   @apply text-black;
+  @apply flex;
+  @apply flex-col;
+  @apply min-h-screen;
+
+
+
 }

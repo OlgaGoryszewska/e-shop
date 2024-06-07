@@ -1,5 +1,6 @@
-import { useState } from "react";
+/*import { useState } from "react";
 import hamburger from "../../assets/hamburger.svg";
+import { Link, NavLink } from "react-router-dom";
 
 function DropDownMenu() {
   const [menu, setMenu] = useState(false);
@@ -14,15 +15,13 @@ function DropDownMenu() {
         <img className=" w-11 mt-2" src={hamburger} alt="menu" />
       </button>
       {menu && (
-        <div className="flex flex-col">
-          <a href="/">Home</a>
-          <a href="/products">Products</a>
-          <a href="/about">About</a>
-          <a href="/contact">Contact</a>
+        <div className="flex flex-col text-lg relative i-50 ">
+          <NavLink to="/HomePage">Home</NavLink>
+          <Link to="/ContactPage">Contact</Link>
         </div>
       )}
     </div>
   );
 }
 
-export default DropDownMenu;
+export default DropDownMenu;  */

@@ -1,16 +1,24 @@
-import react from "react";
-import Header from "../Header";
-import Body from "../Body";
-import Footer from "../Footer";
+import { NavLink, Outlet} from "react-router-dom";
+import React from "react";
 
-const Layout = () => {
+
+
+
+export default function Layout() {
   return (
-    <div className=" flex flex-col min-h-screen">
-      <Header />
-      <Body />
-      <Footer />
+    <div className="">
+      <header>
+        <nav>
+          <h1>My Website</h1>
+          <NavLink to="/">HomePage</NavLink>
+          <NavLink to="/ContactPage">Contact</NavLink>
+        </nav>
+      </header>
+      <main>
+        <Outlet />
+      </main>
     </div>
   );
-};
+}
 
-export default Layout;
+
