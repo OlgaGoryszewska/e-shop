@@ -8,6 +8,7 @@ import ContactPage from "../../Pages/ContactPage";
 import CardPage from "../../Pages/CardPage";
 import CheckOutPage from "../../Pages/CheckOutPage";
 import CheckOutSuccessPage from "../../Pages/CheckoutSuccessPage";
+import IndividualProductPage from "../../Pages/IndividualProductPage";
 
 
 const router = createBrowserRouter(
@@ -18,6 +19,7 @@ const router = createBrowserRouter(
       <Route path="CardPage" element={<CardPage />} />
       <Route path="CheckOutPage" element={<CheckOutPage />} />
       <Route path="CheckOutSuccessPage" element={<CheckOutSuccessPage />} />
+      <Route path="IndividualProductPage" element={<IndividualProductPage />} />
       <Route path="*" element={<div>404</div>} />
     </Route>
   )
