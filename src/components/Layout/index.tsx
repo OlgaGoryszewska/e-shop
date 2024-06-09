@@ -6,9 +6,7 @@ import Header from "../Header";
 export default function Layout() {
   return (
     <div className="">
-      <header>
-        <Header children={undefined} />
-      </header>
+      <Header />
       <main className="flex-grow">
         <Outlet />
       </main>

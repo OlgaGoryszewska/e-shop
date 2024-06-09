@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import ViewCard from "../ViewCard";
 import { Link } from "react-router-dom";
 
 type Image = {
@@ -57,7 +56,7 @@ const DataFetchingComponent: React.FC = () => {
   if (error) return <div>Error: {error}</div>;
 
   return (
-    <div className="grid lg:grid-col-3 gap-2">
+    <div className="">
       {data.map((item) => (
         <div key={item.id}>
           <img
@@ -83,7 +82,7 @@ const DataFetchingComponent: React.FC = () => {
           </div>
           <Link
             to={`/product/${item.id}`}
-            className="bg-blue-500 text-white px-4 py-2 rounded"
+            className="bg-brown text-white px-4 py-2 rounded m-4 "
           >
             View product
           </Link>
