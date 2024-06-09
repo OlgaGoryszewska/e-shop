@@ -17,7 +17,7 @@ const Header = ({ children }: HeaderProps) => {
       <img className="mt-2 h-9 " src={logo} alt="logo" />
       <div className="flex flex-row">
         <Basket />
-        <OpenCard />
+
         <DropDownMenu />
       </div>
     </div>
