@@ -9,6 +9,7 @@ import CardPage from "../../Pages/CardPage";
 import CheckOutPage from "../../Pages/CheckOutPage";
 import CheckOutSuccessPage from "../../Pages/CheckoutSuccessPage";
 import IndividualProductPage from "../../Pages/IndividualProductPage";
+import ProductList from "../ProductList";
 
 
 const router = createBrowserRouter(
