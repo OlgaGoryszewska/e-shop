@@ -1,6 +1,7 @@
 // src/pages/CardPage.tsx
 import React from "react";
 import { useCart } from "../../context/CartContext";
+import CheckOut from "../../components/CheckOut";
 
 const CardPage: React.FC = () => {
   const { cart, removeFromCart } = useCart();
@@ -22,6 +23,7 @@ const CardPage: React.FC = () => {
             >
               Remove from Cart
             </button>
+            <CheckOut />
           </div>
         ))
       )}
