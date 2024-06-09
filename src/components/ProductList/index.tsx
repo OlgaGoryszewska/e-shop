@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ViewCard from '../ViewCard';
+import { Link } from 'react-router-dom';
 
 type Image = {
   url: string;
@@ -76,7 +77,9 @@ const DataFetchingComponent: React.FC = () => {
               </div>
             ))}
           </div>
-          <ViewCard />  
+              <Link to={`/product/${item.id}`} className="bg-blue-500 text-white px-4 py-2 rounded">
+            View product
+          </Link>
         </div>
       ))}
     </div>
