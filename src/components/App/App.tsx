@@ -1,19 +1,15 @@
 // src/App.tsx
-import React from "react";
-import {
-  createBrowserRouter,
-  Route,
-  createRoutesFromElements,
-  RouterProvider,
-} from "react-router-dom";
-import Layout from "../Layout";
-import HomePage from "../../Pages/HomePage";
-import ContactPage from "../../Pages/ContactPage";
-import CardPage from "../../Pages/CardPage";
-import CheckOutPage from "../../Pages/CheckOutPage";
-import CheckOutSuccessPage from "../../Pages/CheckoutSuccessPage";
-import ProductPage from "../../Pages/ProductPage";
-import { CartProvider } from "../../context/CartContext";
+import React from 'react';
+import { createBrowserRouter, Route, createRoutesFromElements, RouterProvider } from 'react-router-dom';
+import Layout from '../Layout';
+import HomePage from '../../Pages/HomePage';
+import ContactPage from '../../Pages/ContactPage';
+import CardPage from '../../Pages/CardPage';
+import CheckOutPage from '../../Pages/CheckOutPage';
+import CheckOutSuccessPage from '../../Pages/CheckoutSuccessPage';
+import ProductPage from '../../Pages/ProductPage';
+import SearchPage from '../../Pages/SearchPage';
+import { CartProvider } from '../../context/CartContext';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,10 +19,11 @@ const router = createBrowserRouter(
       <Route path="CardPage" element={<CardPage />} />
       <Route path="CheckOutPage" element={<CheckOutPage />} />
       <Route path="CheckOutSuccessPage" element={<CheckOutSuccessPage />} />
-      <Route path="product/:id" element={<ProductPage />} />
+      <Route path="/product/:id" element={<ProductPage />} />
+      <Route path="/search" element={<SearchPage />} />
       <Route path="*" element={<div>404</div>} />
-    </Route>,
-  ),
+    </Route>
+  )
 );
 
 function App() {
