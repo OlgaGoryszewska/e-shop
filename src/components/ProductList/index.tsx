@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import ViewCard from "../ViewCard";
 import { Link } from "react-router-dom";
 
 type Image = {

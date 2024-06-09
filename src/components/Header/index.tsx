@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import OpenCard from '../Basket';
+import DropDownMenu from '../DropDownMenu';
+import logo from '../../assets/logo.svg';
 
 const Header: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -19,8 +21,8 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="bg-gray-800 p-4 text-white flex justify-between items-center">
-      <Link to="/" className="text-lg font-bold">Home</Link>
+    <header className="p-4 flex justify-between items-center">
+      <img src={logo} alt="logo" className="w-24" /> 
       <form onSubmit={handleSearchSubmit} className="flex items-center">
         <input
           type="text"
@@ -29,11 +31,14 @@ const Header: React.FC = () => {
           placeholder="Search products..."
           className="px-4 py-2 rounded-l bg-gray-200 text-black"
         />
-        <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-r">
+        <button type="submit" className="bg-brown text-white px-4 py-2 rounded-r">
           Search
         </button>
       </form>
+      <div className='flex flex-row'>
       <OpenCard />
+      <DropDownMenu />
+      </div>
     </header>
   );
 };
