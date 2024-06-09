@@ -82,7 +82,7 @@ const DataFetchingComponent: React.FC = () => {
           </div>
           <Link
             to={`/product/${item.id}`}
-            className="bg-brown text-white px-4 py-2 rounded m-4 "
+            className="bg-brown text-white px-4 py-2 rounded ml-0 m-4 inline-block "
           >
             View product
           </Link>

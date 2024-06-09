@@ -1,4 +1,4 @@
-// src/pages/ProductPage.tsx
+
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useCart } from "../../context/CartContext";
@@ -44,7 +44,7 @@ const ProductPage: React.FC = () => {
           throw new Error("Network response was not ok");
         }
         const result = await response.json();
-        setProduct(result.data); // Accessing the nested 'data' object
+        setProduct(result.data);
       } catch (error) {
         if (error instanceof Error) {
           setError(error.message);
@@ -86,7 +86,7 @@ const ProductPage: React.FC = () => {
             quantity: 1,
           })
         }
-        className="bg-green-500 text-white px-4 py-2 rounded"
+        className="bg-brown text-white px-4 py-2 rounded mb-4"
       >
         Add to Cart
       </button>
