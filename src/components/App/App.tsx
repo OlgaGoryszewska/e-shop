@@ -1,16 +1,19 @@
-import { createBrowserRouter, Route, createRoutesFromElements, RouterProvider } from "react-router-dom";
-
+// src/App.tsx
+import React from "react";
+import {
+  createBrowserRouter,
+  Route,
+  createRoutesFromElements,
+  RouterProvider,
+} from "react-router-dom";
 import Layout from "../Layout";
-
-//Pages
 import HomePage from "../../Pages/HomePage";
 import ContactPage from "../../Pages/ContactPage";
 import CardPage from "../../Pages/CardPage";
 import CheckOutPage from "../../Pages/CheckOutPage";
 import CheckOutSuccessPage from "../../Pages/CheckoutSuccessPage";
-import ProductList from "../ProductList";
 import ProductPage from "../../Pages/ProductPage";
-
+import { CartProvider } from "../../context/CartContext";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -19,18 +22,19 @@ const router = createBrowserRouter(
       <Route path="ContactPage" element={<ContactPage />} />
       <Route path="CardPage" element={<CardPage />} />
       <Route path="CheckOutPage" element={<CheckOutPage />} />
-      <Route path="/product/:id" element={<ProductPage />} />
       <Route path="CheckOutSuccessPage" element={<CheckOutSuccessPage />} />
+      <Route path="product/:id" element={<ProductPage />} />
       <Route path="*" element={<div>404</div>} />
-    </Route>
-  )
+    </Route>,
+  ),
 );
 
 function App() {
   return (
-    <RouterProvider router={router} />
+    <CartProvider>
+      <RouterProvider router={router} />
+    </CartProvider>
   );
 }
 
 export default App;
-

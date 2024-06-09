@@ -1,6 +1,7 @@
 // src/pages/ProductPage.tsx
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { useCart } from "../../context/CartContext";
 
 type Image = {
   url: string;
@@ -31,13 +32,16 @@ const ProductPage: React.FC = () => {
   const [product, setProduct] = useState<ProductType | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const { addToCart } = useCart();
 
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await fetch(`https://v2.api.noroff.dev/online-shop/${id}`);
+        const response = await fetch(
+          `https://v2.api.noroff.dev/online-shop/${id}`,
+        );
         if (!response.ok) {
-          throw new Error('Network response was not ok');
+          throw new Error("Network response was not ok");
         }
         const result = await response.json();
         setProduct(result.data); // Accessing the nested 'data' object
@@ -45,7 +49,7 @@ const ProductPage: React.FC = () => {
         if (error instanceof Error) {
           setError(error.message);
         } else {
-          setError('An unknown error occurred');
+          setError("An unknown error occurred");
         }
       } finally {
         setLoading(false);
@@ -63,18 +67,37 @@ const ProductPage: React.FC = () => {
     <div className="container mx-auto p-4">
       <h1 className="text-3xl font-bold mb-4">{product.title}</h1>
       {product.image && (
-        <img className="w-full h-64 object-cover mb-4" src={product.image.url} alt={product.image.alt} />
+        <img
+          className="w-full h-64 object-cover mb-4"
+          src={product.image.url}
+          alt={product.image.alt}
+        />
       )}
       <p className="mb-2">{product.description}</p>
       <p className="mb-2">Price: ${product.price}</p>
       <p className="mb-2">Discounted Price: ${product.discountedPrice}</p>
       <p className="mb-4">Rating: {product.rating}</p>
+      <button
+        onClick={() =>
+          addToCart({
+            id: product.id,
+            title: product.title,
+            price: product.price,
+            quantity: 1,
+          })
+        }
+        className="bg-green-500 text-white px-4 py-2 rounded"
+      >
+        Add to Cart
+      </button>
       <div>
         <h3 className="text-xl font-semibold mb-2">Reviews</h3>
         {product.reviews && product.reviews.length > 0 ? (
           product.reviews.map((review) => (
             <div key={review.id} className="mb-2">
-              <p className="font-bold">{review.username}: {review.rating} stars</p>
+              <p className="font-bold">
+                {review.username}: {review.rating} stars
+              </p>
               <p>{review.description}</p>
             </div>
           ))
