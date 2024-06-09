@@ -1,4 +1,4 @@
-// src/components/Header.tsx
+
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import OpenCard from '../Basket';
@@ -21,9 +21,15 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="p-4 flex justify-between items-center">
-      <img src={logo} alt="logo" className="w-24" /> 
-      <form onSubmit={handleSearchSubmit} className="flex items-center">
+    <header className="p-4 flex flex-col justify-between ">
+      <div className='flex flex-row justify-between'>
+        <img src={logo} alt="logo" className="w-24" /> 
+        <div className='flex flex-row'>
+          <OpenCard />
+          <DropDownMenu />
+      </div>
+      </div>
+      <form onSubmit={handleSearchSubmit} className="flex items-center m-auto">
         <input
           type="text"
           value={searchTerm}
@@ -35,10 +41,6 @@ const Header: React.FC = () => {
           Search
         </button>
       </form>
-      <div className='flex flex-row'>
-      <OpenCard />
-      <DropDownMenu />
-      </div>
     </header>
   );
 };
