@@ -2,7 +2,6 @@ import { useState } from "react";
 import hamburger from "../../assets/hamburger.svg";
 import { Link, NavLink } from "react-router-dom";
 
-
 function DropDownMenu() {
   const [menu, setMenu] = useState(false);
 
@@ -25,4 +24,4 @@ function DropDownMenu() {
   );
 }
 
-export default DropDownMenu;  
+export default DropDownMenu;

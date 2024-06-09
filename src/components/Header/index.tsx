@@ -1,26 +1,40 @@
+// src/components/Header.tsx
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import OpenCard from '../Basket';
 
-import hamburger from "../../assets/hamburger.svg";
-import basket from "../../assets/basket.svg";
-import Basket from "../Basket";
-import logo from "../../assets/logo.png";
-import { useState } from "react";
-import DropDownMenu from "../DropDownMenu";
-import React, { ReactNode } from "react";
+const Header: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const navigate = useNavigate();
 
+  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(event.target.value);
+  };
 
-interface HeaderProps {
-  children: ReactNode;
-}
+  const handleSearchSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (searchTerm.trim()) {
+      navigate(`/search?query=${searchTerm}`);
+    }
+  };
 
-const Header = ({ children }: HeaderProps) => {
   return (
-    <div className="flex flex-row justify-between max-h-12 mb-10 ">
-      <img className="mt-2 h-9 " src={logo} alt="logo" />
-      <div className="flex flex-row">
-        <Basket/>
-        <DropDownMenu />
-      </div>
-    </div>
+    <header className="bg-gray-800 p-4 text-white flex justify-between items-center">
+      <Link to="/" className="text-lg font-bold">Home</Link>
+      <form onSubmit={handleSearchSubmit} className="flex items-center">
+        <input
+          type="text"
+          value={searchTerm}
+          onChange={handleSearchChange}
+          placeholder="Search products..."
+          className="px-4 py-2 rounded-l bg-gray-200 text-black"
+        />
+        <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-r">
+          Search
+        </button>
+      </form>
+      <OpenCard />
+    </header>
   );
 };
 
