@@ -8,8 +8,8 @@ import ContactPage from "../../Pages/ContactPage";
 import CardPage from "../../Pages/CardPage";
 import CheckOutPage from "../../Pages/CheckOutPage";
 import CheckOutSuccessPage from "../../Pages/CheckoutSuccessPage";
-import IndividualProductPage from "../../Pages/IndividualProductPage";
 import ProductList from "../ProductList";
+import ProductPage from "../../Pages/ProductPage";
 
 
 const router = createBrowserRouter(
@@ -19,8 +19,8 @@ const router = createBrowserRouter(
       <Route path="ContactPage" element={<ContactPage />} />
       <Route path="CardPage" element={<CardPage />} />
       <Route path="CheckOutPage" element={<CheckOutPage />} />
+      <Route path="/product/:id" element={<ProductPage />} />
       <Route path="CheckOutSuccessPage" element={<CheckOutSuccessPage />} />
-      <Route path="IndividualProductPage" element={<IndividualProductPage />} />
       <Route path="*" element={<div>404</div>} />
     </Route>
   )
