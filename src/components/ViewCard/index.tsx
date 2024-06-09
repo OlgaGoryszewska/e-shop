@@ -1,8 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import basket from '../../assets/basket.svg';
 
-function OpenCard() {
+function ViewCard() {
     const navigate = useNavigate();
 
     const handleClick = () => {
@@ -11,10 +10,10 @@ function OpenCard() {
 
     return (
         <div>
-            <button onClick={handleClick}><img className="mr-2 w-9 mt-3" src={basket} alt="basket" /></button>
+            <button onClick={handleClick} className='bg-brown hover:bg-primary text-white font-medium my-2 py-2 px-4 rounded'>View Product</button>
         </div>
     );
 
 }
 
-export default OpenCard;   
+export default ViewCard;   

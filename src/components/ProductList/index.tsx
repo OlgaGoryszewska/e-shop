@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ViewCard from '../ViewCard';
 
 type Image = {
   url: string;
@@ -75,7 +76,7 @@ const DataFetchingComponent: React.FC = () => {
               </div>
             ))}
           </div>
-          <button className='bg-brown hover:bg-primary text-white font-medium my-2 py-2 px-4 rounded'>View Product</button>
+          <ViewCard />  
         </div>
       ))}
     </div>
