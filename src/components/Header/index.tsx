@@ -5,6 +5,7 @@ import logo from "../../assets/logo.png";
 import { useState } from "react";
 import DropDownMenu from "../DropDownMenu";
 import React, { ReactNode } from "react";
+import OpenCard from "../Basket";
 
 interface HeaderProps {
   children: ReactNode;
@@ -16,6 +17,7 @@ const Header = ({ children }: HeaderProps) => {
       <img className="mt-2 h-9 " src={logo} alt="logo" />
       <div className="flex flex-row">
         <Basket />
+        <OpenCard />
         <DropDownMenu />
       </div>
     </div>
