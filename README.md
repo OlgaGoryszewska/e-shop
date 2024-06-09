@@ -2,7 +2,7 @@
 
 E-Shop is an online shopping platform built with React and TypeScript. The application allows users to browse products, view product details, add items to a shopping cart, and search for products by name.
 # Netlify: 
-(https://sylwia-e-shop.netlify.app/)
+https://sylwia-e-shop.netlify.app/
 ## Table of Contents
 
 - [Features](#features)
