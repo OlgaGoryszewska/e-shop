@@ -3,7 +3,7 @@ import ProductList from "../../components/ProductList";
 
 
 
-const HomePage = () => {
+const HomePage: React.FC  = () => {
   return (
     <div>
       <h1>Home Page</h1>
